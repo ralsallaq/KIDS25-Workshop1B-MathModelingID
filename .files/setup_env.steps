@@ -1,0 +1,50 @@
+python3 -m venv .myven
+source .myven/bin/activate
+pip install --upgrade pip
+pip install jupyter matplotlib ipywidgets ipympl numpy
+pip install scipy
+#If you use jupyter-lab (do not use it as the below is depricated)
+#jupyter labextension install @jupyter-widgets/jupyterlab-manager
+pip install streamlit
+
+#### We got a VM on azure that we can use, thanks for Gang Wu and his team for setting up this using CAB subscription (Biohackathon resource group) and to Matt Foil who listed the VM on the whitelist to be accessible within StJude. 
+
+ssh azureuser@20.115.101.96
+Password: M<F+aU)Xm<9q?E/8
+
+To login disable CloudFlare, then use a terminal on your local computer:
+1. Type ssh azureuser@20.115.101.96
+2. Enter the password when prompted
+3. The create a directory for yourself:
+mkdir <yourfirstname>
+4. Descend to your directory:
+cd <yourfirstname>
+5. copy jupyter notebooks to your directory:
+cp ../ralsallaq/*.ipynb .
+
+To launch the notebook do the following:
+1. Descend to your directory if you are not already there
+cd <yourfirstname>
+2. Run the following command:
+source ../.myenv/bin/activate
+3. Pick four integers by running this command:
+python -c "import numpy as np; print(np.random.choice(9,4))" 
+(for example [2 8 3 0])
+4. Run the following command:
+jupyter-lab --no-browser --port=2830 
+
+this will start the Jupyter lab at something like:
+
+http://127.0.0.1:2830/lab?token=e47b25ebd031d1718cb333193be3503484e671052cd5f23c
+
+
+
+5. Now on your local laptop open a new terminal and run:
+ssh -N -L 2830:localhost:2830 azureuser@20.115.101.96  
+
+enter the azure VM password when prompted and leave this terminal untouched (minimize it)
+
+6. Use your favorite local browser and copy the link from starting the jupyter-lab in step 4 into the address bar of your browser and click enter to view the jupyter-lab 
+
+
+

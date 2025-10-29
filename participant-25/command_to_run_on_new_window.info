@@ -1,0 +1,1 @@
+ssh -N -L 8306:localhost:8306 azureuser@20.115.101.96

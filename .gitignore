@@ -1,0 +1,15 @@
+.Xauthority
+.bash_history
+.bash_logout
+.bashrc
+.cache/
+.gitconfig
+.ipynb_checkpoints/
+.ipython/
+.jupyter/
+.local/
+.myven/
+.profile
+.ssh/
+.sudo_as_admin_successful
+.viminfo

@@ -1,0 +1,1 @@
+ssh -N -L 8287:localhost:8287 azureuser@20.115.101.96

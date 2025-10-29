@@ -1,0 +1,20 @@
+Instructions:
+ 	1. view the contents of command_to_run_on_new_window.info:
+           cat command_to_run_on_new_window.info
+         2. Open a new command window:
+	   A. If you are using Windows computer open a cmd window by searching for 'cmd' in the search bar and clicking on the Command Prompt from the results
+ 	   B. If you are using Mac OS then open Applications and look for terminal, click it to open.
+ 	3. Type or copy paste the command from 1. above and click enter
+ 	4. Type the VM password
+ 	5. If all is good the terminal will sort of appear to be frozen after you entered the password, leave this command/terminal window open at all times and minimize it as no more work is needed on it. 
+ 	6. To intiate Jupyter from within your participant directory run
+ 	   ./command_to_initiate_jupyter.sh
+ 	7. If all goes well you will see messages such as
+ 	   To access the server, open this file in a browser:
+ 	       file:///....
+ 	    Or copy and paste one of the URLs:
+ 	       http://localhost:...
+ 	8. Open your favorite browser on your laptop.
+ 	9. Copy the entire URL line that starts with http://localhost:
+ 	    and paste it into your local browser to view your own notebook copy
+ 	10. Report any issues to the Workshop facilitator.
